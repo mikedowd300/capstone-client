@@ -6,5 +6,17 @@
       <button type="submit" class="btn btn-default" ng-show="false">Submit</button>
     </div>
   </form>
+  <div class="" ng-show="$ctrl.global.madeSearch">
+    <div class="flexer">
+      <div class="" ng-repeat="sound in $ctrl.sounds">
+        <div class="sound-box-2" ng-click="$ctrl.play(sound)">
+          <h4>{{sound.name}}</h4>
+          <audio ng-show="" id="sound-{{sound.id}}">
+            <source src="{{sound.url}}"  type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </div>

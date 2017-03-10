@@ -10,9 +10,15 @@ angular.module('app')
       vm.doSearch = function() {
         $http.get(`http://localhost:3000/sounds/${vm.searchTerm}`)
         .then(function(data) {
-          console.log(data);
+          vm.sounds = data.data;
           vm.global.madeSearch = true;
         });
+      }
+
+      vm.play= function(sound) {
+        let str = `sound-${sound.id}`
+        var audio = document.getElementById(str);
+        audio.play();
       }
 
     },
