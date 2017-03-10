@@ -11,7 +11,8 @@ angular.module('app')
     templateUrl: 'app/components/my.footer/template.html',
     bindings: {
       user: "=",
-      page: "="
+      page: "=",
+      global: "="
     }
   })
 

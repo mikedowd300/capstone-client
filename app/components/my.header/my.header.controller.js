@@ -14,6 +14,7 @@ angular.module('app')
     templateUrl: 'app/components/my.header/template.html',
     bindings: {
       user: "=",
-      page: "="
+      page: "=",
+      global: "="
     }
   })

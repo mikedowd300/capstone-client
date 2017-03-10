@@ -1,3 +1,13 @@
 <div class="landing-wrapper">
-  <search></search>
+  <div class="container col-xs-10 col-xs-offset-1">
+    <div class="flexer">
+      <div class="half">
+        <featured-sounds user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></featured-sounds>
+      </div>
+      <div class="half">
+        <featured-sites user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></featured-sites>
+      </div>
+    </div>
+    <search user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></search>
+  </div>
 </div>

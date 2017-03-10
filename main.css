@@ -22,6 +22,10 @@
   text-align: center;
 }
 
+.text-white {
+  color: white;
+}
+
 .header-wrapper {
   height: 4em;
   background-color: blue;
@@ -53,4 +57,15 @@
 
 .initial-wrapper {
   min-width: 385px;
+}
+
+.sound-box {
+  background-color: green;
+  width: 60%;
+  padding-left: 10px;
+  border-radius: 5px;
+}
+
+.sound-box:hover {
+  cursor: pointer;
 }

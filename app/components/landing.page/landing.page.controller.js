@@ -11,6 +11,7 @@ angular.module('app')
     templateUrl: 'app/components/landing.page/template.html',
     bindings: {
       user: "=",
-      page: "="
+      page: "=",
+      global: "="
     }
   })

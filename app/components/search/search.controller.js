@@ -11,6 +11,7 @@ angular.module('app')
         $http.get(`http://localhost:3000/sounds/${vm.searchTerm}`)
         .then(function(data) {
           console.log(data);
+          vm.global.madeSearch = true;
         });
       }
 
@@ -18,6 +19,7 @@ angular.module('app')
     templateUrl: 'app/components/search/template.html',
     bindings: {
       user: "=",
-      page: "="
+      page: "=",
+      global: "="
     }
   })
