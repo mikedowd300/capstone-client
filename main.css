@@ -1,0 +1,56 @@
+.full-width {
+  width: 100%;
+}
+
+.half {
+  width: 50%;
+}
+
+.third {
+  width: 33.333%
+}
+
+.flexer {
+  display: flex;
+}
+
+.boxme {
+  border: 1px solid red;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.header-wrapper {
+  height: 4em;
+  background-color: blue;
+}
+
+.landing-wrapper {
+  height: 84vh;
+  background-image: url("http://blogs.bodleian.ox.ac.uk/digital/wp-content/uploads/sites/166/2016/09/JohnsHopkinsSoundImage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0;
+}
+
+.header-nav-div {
+  margin-top: 1em;
+  background: red;
+  border: 2px solid white;
+  margin-bottom: .5em;
+}
+
+.footer-text {
+  margin-top: 1em
+}
+
+.footer-wrapper {
+  height: 3em;
+  background-color: blue;
+}
+
+.initial-wrapper {
+  min-width: 385px;
+}
