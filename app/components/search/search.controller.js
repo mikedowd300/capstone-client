@@ -11,7 +11,6 @@ angular.module('app')
         $http.get(`http://localhost:3000/sounds/${vm.searchTerm}`)
         .then(function(data) {
           console.log(data);
-          console.log(vm.searchTerm);
         });
       }
 
