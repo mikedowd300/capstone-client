@@ -9,12 +9,26 @@
   <div class="" ng-show="$ctrl.global.madeSearch">
     <div class="flexer">
       <div class="" ng-repeat="sound in $ctrl.sounds">
-        <div class="sound-box-2" ng-click="$ctrl.play(sound)">
-          <h4>{{sound.name}}</h4>
-          <audio ng-show="" id="sound-{{sound.id}}">
-            <source src="{{sound.url}}"  type="audio/mpeg">
-          </audio>
-        </div>
+
+        <my-sound user="$ctrl.user" page="$ctrl.page" global="$ctrl.global" sound="sound"></my-sound>
+        <!-- <div class="container container col-xs-12">
+          <div class="sound-box-2 col-xs-9" ng-click="$ctrl.play(sound)">
+            <div class="">
+              <h4>{{sound.name}}</h4>
+            </div>
+            <audio ng-show="" id="sound-{{sound.id}}">
+              <source src="{{sound.url}}"  type="audio/mpeg">
+            </audio>
+          </div>
+
+          <div class="copy-container container col-xs-3" ng-click="$ctrl.copy(sound)">
+            <div class="rotate">
+              <p>copy</p>
+              <textarea ng-show="true" class="copy-textarea" id="copy-{{sound.id}}">{{sound.url}}</textarea>
+            </div>
+          </div>
+        </div> -->
+
       </div>
     </div>
   </div>

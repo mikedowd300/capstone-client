@@ -26,9 +26,17 @@
   color: white;
 }
 
+.no-margin {
+  margin: 0;
+}
+
 .header-wrapper {
   height: 4em;
   background-color: blue;
+}
+
+.rotate {
+  transform: rotate(90deg);
 }
 
 .landing-wrapper {
@@ -61,18 +69,47 @@
 
 .sound-box {
   background-color: green;
-  width: 60%;
-  padding-left: 10px;
+  width: 8rem;
+  padding: 3px;
+  margin: 2px 0;
   border-radius: 5px;
 }
 
 .sound-box-2 {
   background-color: pink;
-  width: 100%;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
 }
 
 .sound-box:hover {
   cursor: pointer;
+}
+
+.search-wrapper {
+  margin-top: 1em;
+}
+
+.copy-container {
+  background-color: black;
+  color: white;
+  height: 3.4em;
+  width: 2em;
+  margin-left: -5px;
+  padding: 4px;
+  border-radius: 0 5px 5px 0;
+}
+
+.copy-textarea {
+  height: 0;
+  width: 0;
+  background-color: black;
+  color: black;
+}
+
+.rotator {
+  margin: -1.6em 2em 0 0;
+}
+
+.copy-p {
+  margin-right: -12em;
 }

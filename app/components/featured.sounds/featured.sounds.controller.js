@@ -12,17 +12,18 @@ angular.module('app')
 
       }
 
-      vm.play= function(sound) {
-        let str = `sound-${sound.id}`
-        var audio = document.getElementById(str);
-        audio.play();
-      }
+      // vm.play= function(sound) {
+      //   let str = `sound-${sound.id}`
+      //   var audio = document.getElementById(str);
+      //   audio.play();
+      // }
 
     },
     templateUrl: 'app/components/featured.sounds/template.html',
     bindings: {
       user: "=",
       page: "=",
-      global: "="
+      global: "=",
+      sound: "="
     }
   })

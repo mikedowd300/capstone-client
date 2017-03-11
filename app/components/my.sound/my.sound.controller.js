@@ -1,18 +1,10 @@
 angular.module('app')
-  .component ('search', {
-    controller: function($http) {
+  .component ('mySound', {
+    controller: function() {
       const vm = this;
 
       vm.$onInit = function() {
-        vm.sounds = [];
-      }
 
-      vm.doSearch = function() {
-        $http.get(`http://localhost:3000/sounds/${vm.searchTerm}`)
-        .then(function(data) {
-          vm.sounds = data.data;
-          vm.global.madeSearch = true;
-        });
       }
 
       vm.play= function(sound) {
@@ -29,10 +21,11 @@ angular.module('app')
       }
 
     },
-    templateUrl: 'app/components/search/template.html',
+    templateUrl: 'app/components/my.sound/template.html',
     bindings: {
       user: "=",
       page: "=",
-      global: "="
+      global: "=",
+      sound: "="
     }
   })

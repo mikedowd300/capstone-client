@@ -1,0 +1,17 @@
+<div class="container container col-xs-12">
+  <div class="sound-box-2 col-xs-9" ng-click="$ctrl.play($ctrl.sound)">
+    <div class="">
+      <h4>{{$ctrl.sound.name}}</h4>
+    </div>
+    <audio ng-show="" id="sound-{{$ctrl.sound.id}}">
+      <source src="{{$ctrl.sound.url}}"  type="audio/mpeg">
+    </audio>
+  </div>
+
+  <div class="copy-container container col-xs-3" ng-click="$ctrl.copy($ctrl.sound)">
+    <div class="rotate">
+      <p>copy</p>
+      <textarea ng-show="true" class="copy-textarea" id="copy-{{$ctrl.sound.id}}">{{$ctrl.sound.url}}</textarea>
+    </div>
+  </div>
+</div>
