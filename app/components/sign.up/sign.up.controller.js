@@ -46,7 +46,7 @@ angular.module('app')
               vm.page.login = false;
               vm.page.signup = false;
             }, function() {
-              console.log('Login Failed!');
+              console.log('Signup Failed!');
             });
           }
         })

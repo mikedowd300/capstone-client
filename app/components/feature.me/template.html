@@ -1,0 +1,18 @@
+<div class="feature-me-wrapper">
+  <div class="relative">
+
+    <form ng-submit="$ctrl.featureThis()">
+      <h5 class="text-white">What's this?</h5>
+      <div class="form-group" ng-mouseover="$ctrl.showTrue()" ng-mouseleave="$ctrl.showFalse()">
+        <input type="url" class="form-control" placeholder="https://YOUR.URL.HERE"
+            ng-model="$ctrl.featureURL.url">
+        <button type="submit" class="btn btn-default" ng-show="false">Submit</button>
+      </div>
+    </form>
+
+    <div class="whats-this absolute" ng-show="$ctrl.showMessage">
+      <p>Developers, have you created a site useing Earbyter.com's API? Would you like us to feature it on our landing page. Enter the URL to you page here and we'll give it a look.</p>
+    </div>
+
+  </div>
+</div>

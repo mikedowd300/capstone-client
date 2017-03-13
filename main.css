@@ -35,6 +35,14 @@
   height: 100%;
 }
 
+.padme-5 {
+  padding: 5px;
+}
+
+.padme-10 {
+  padding: 10px;
+}
+
 .boxme {
   border: 1px solid red;
 }
@@ -75,7 +83,6 @@
 
 .member-wrapper {
   height: 84vh;
-
   padding: 0;
 }
 
@@ -177,7 +184,7 @@
 
 .left-side {
   margin: 0;
-  width: 80%;
+  width: 85%;
   background-color: transparent;
   overflow-y: auto;
   background-image: url("https://sarahbear48847.files.wordpress.com/2015/01/funny-sounds.jpeg");
@@ -187,8 +194,13 @@
 
 .right-side-bar {
   margin: 0;
-  width: 20%;
+  width: 15%;
   background: white;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.whats-this {
+  background-color: rgba(34, 29, 34, .5);
+  color: white;
 }
