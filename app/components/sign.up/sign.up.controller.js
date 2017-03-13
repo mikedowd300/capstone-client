@@ -7,10 +7,23 @@ angular.module('app')
 
       }
 
+      vm.signUpTrue = function() {
+        vm.page.signup = true;
+      }
+
+      vm.signUpFalse = function() {
+        vm.page.signup = false;
+      }
+
+      vm.signUp = function() {
+        console.log('signUp');
+      }
+
     },
     templateUrl: 'app/components/sign.up/template.html',
     bindings: {
       user: "=",
-      page: "="
+      page: "=",
+      global: "="
     }
-  })
+    })

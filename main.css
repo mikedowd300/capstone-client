@@ -1,3 +1,8 @@
+.error-class {
+    box-shadow: 2px 2px 2px red;
+    border: 1px solid red;
+}
+
 .full-width {
   width: 100%;
 }
@@ -10,12 +15,28 @@
   width: 33.333%
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
 .flexer {
   display: flex;
 }
 
 .boxme {
   border: 1px solid red;
+}
+
+.white {
+  background-color: white;
 }
 
 .text-center {
@@ -112,4 +133,32 @@
 
 .copy-p {
   margin-right: -12em;
+}
+
+.login-wrapper, .sign-up-wrapper {
+  box-sizing: border-box;
+  padding: 0 2em 2em 2em;
+  background-color: white;
+  z-index: 10000;
+  border-radius: 10px;
+  border: 1px solid black;
+  width: 35em;
+  top: 5em;
+  left: calc((100% - 35em) / 2);
+}
+
+.featured-sounds-wrapper, .sound-box {
+  z-index: 1000;
+}
+
+.x-closer {
+  top: 3px;
+  left: calc(100% - 2em);
+  border: 1px solid gray;
+  background-color: black;
+  color: white;
+}
+
+.x-closer h3 {
+  margin: 0 2px;
 }

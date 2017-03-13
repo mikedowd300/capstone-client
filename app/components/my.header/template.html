@@ -1,4 +1,4 @@
-<div class="header-wrapper full-width">
+<div class="header-wrapper full-width relative">
   <div class="flexer">
     <div class="half">
       <h2 class="text-center">{{$ctrl.title}}</h2>
@@ -10,13 +10,14 @@
       <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.landing">
         <h5 class="text-center">Home</h5>
       </div>
-      <div class="third header-nav-div" ng-show="!$ctrl.user.type">
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type" ng-click="$ctrl.showSignUp()">
         <h5 class="text-center">Sign Up</h5>
       </div>
-      <div class="third header-nav-div" ng-show="!$ctrl.user.type">
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type" ng-click="$ctrl.showLogin()">
         <h5 class="text-center">Log In</h5>
       </div>
     </div>
   </div>
-
+  <login user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></login>
+  <sign-up user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></sign-up>
 </div>

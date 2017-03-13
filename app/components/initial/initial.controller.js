@@ -11,6 +11,8 @@ angular.module('app')
           members: false,
           api: false,
           admin: false,
+          login: false,
+          signup: false
         };
         vm.global = {
           madeSearch: false

@@ -10,6 +10,16 @@ angular.module('app')
         if (vm.page.admin) vm.title = 'Admin';
       }
 
+      vm.showLogin = function() {
+        console.log('showLogin');
+        vm.page.login = true;
+      }
+
+      vm.showSignUp = function() {
+        console.log('showSignUp');
+        vm.page.signup = true;
+      }
+
     },
     templateUrl: 'app/components/my.header/template.html',
     bindings: {
