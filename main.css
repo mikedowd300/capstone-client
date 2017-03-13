@@ -31,6 +31,10 @@
   display: flex;
 }
 
+.height100 {
+  height: 100%;
+}
+
 .boxme {
   border: 1px solid red;
 }
@@ -54,6 +58,7 @@
 .header-wrapper {
   height: 4em;
   background-color: blue;
+  border-bottom: 1px solid black;
 }
 
 .rotate {
@@ -65,6 +70,12 @@
   background-image: url("http://blogs.bodleian.ox.ac.uk/digital/wp-content/uploads/sites/166/2016/09/JohnsHopkinsSoundImage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 0;
+}
+
+.member-wrapper {
+  height: 84vh;
+
   padding: 0;
 }
 
@@ -80,6 +91,7 @@
 }
 
 .footer-wrapper {
+  border-top: 1px solid black;
   height: 3em;
   background-color: blue;
 }
@@ -161,4 +173,22 @@
 
 .x-closer h3 {
   margin: 0 2px;
+}
+
+.left-side {
+  margin: 0;
+  width: 80%;
+  background-color: transparent;
+  overflow-y: auto;
+  background-image: url("https://sarahbear48847.files.wordpress.com/2015/01/funny-sounds.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.right-side-bar {
+  margin: 0;
+  width: 20%;
+  background: white;
+  overflow-y: auto;
+  overflow-x: hidden;
 }

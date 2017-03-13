@@ -11,12 +11,10 @@ angular.module('app')
       }
 
       vm.showLogin = function() {
-        console.log('showLogin');
         vm.page.login = true;
       }
 
       vm.showSignUp = function() {
-        console.log('showSignUp');
         vm.page.signup = true;
       }
 

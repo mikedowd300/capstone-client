@@ -1,10 +1,10 @@
-<div class="sign-up-wrapper absolute" ng-show="$ctrl.page.signup">
+<div class="sign-up-wrapper absolute" ng-show="$ctrl.page.signup && !$ctrl.inputError">
   <div class="absolute x-closer" ng-click="$ctrl.signUpFalse()">
     <h3>X</h3>
   </div>
   <div class="relative">
     <h2>Sign Up!</h2>
-    <form novalidate name="$ctrl.signUpForm" ng-submit="$ctrl.signUp()">
+    <form novalidate name="$ctrl.signUpForm" ng-submit="$ctrl.submitSignUpForm()">
       <div class="">
         <div class="form-group">
           <label for="email">Email address:</label>
@@ -22,4 +22,16 @@
       </div>
     </form>
   </div>
+</div>
+<div class="sign-up-wrapper absolute" ng-show="$ctrl.page.signup && $ctrl.inputError">
+  <div class="absolute x-closer" ng-click="$ctrl.signUpFalse()">
+    <h3>X</h3>
+  </div>
+  <div class="">
+    <h2>That email is already associated with an account!</h2>
+    <div class="btn-info btn"  ng-click="$ctrl.tryAgain()">
+      <h5>Try again!</h5>
+    </div>
+  </div>
+
 </div>

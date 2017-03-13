@@ -18,8 +18,13 @@ angular.module('app')
       vm.logIn = function() {
         $http.post(`http://localhost:3000/members/login`, vm.login)
         .then(function(data) {
-          console.log(data);
-        }, function() {
+          vm.page.login = false;
+          vm.user = data.data;
+          vm.page.landing = false;
+          if(vm.user.type === 'member') vm.page.members = true;
+          if(vm.user.type === 'admin') vm.page.admin = true;
+        },
+        function() {
           console.log('Login Failed!');
         });
       }
