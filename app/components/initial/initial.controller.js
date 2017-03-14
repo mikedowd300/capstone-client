@@ -15,7 +15,8 @@ angular.module('app')
           signup: false
         };
         vm.global = {
-          madeSearch: false
+          madeSearch: false,
+          title: 'EarByter.com'
         };
 
       }

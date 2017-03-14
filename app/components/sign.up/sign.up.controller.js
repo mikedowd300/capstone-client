@@ -9,6 +9,7 @@ angular.module('app')
 
       vm.signUpTrue = function() {
         vm.page.signup = true;
+        vm.page.login = true;
       }
 
       vm.signUpFalse = function() {

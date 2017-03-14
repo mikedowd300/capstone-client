@@ -2,12 +2,12 @@
 
   <form ng-submit="$ctrl.doSearch()">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search" ng-model="$ctrl.searchTerm">
+      <input type="text" class="form-control margin-2" placeholder="Search" ng-model="$ctrl.searchTerm">
       <button type="submit" class="btn btn-default" ng-show="false">Submit</button>
     </div>
   </form>
   <div class="" ng-show="$ctrl.global.madeSearch">
-    <div class="flexer">
+    <div class="">
       <div class="" ng-repeat="sound in $ctrl.sounds">
 
         <my-sound user="$ctrl.user" page="$ctrl.page" global="$ctrl.global" sound="sound"></my-sound>

@@ -1,0 +1,53 @@
+<div class="sound-form-wrapper container col-xs-12">
+  <div class="add-sound">
+    <form class="sound-form" name="$ctrl.sounder">
+
+      <div class="flexer">
+        <div class="form-group half">
+          <label>Select a file!</label>
+          <input type="file" id="file-input"
+            ng-model="$ctrl.sound.myFileName">
+        </div>
+
+        <div class="form-group half">
+          <label for="sound-name">Name your Sound</label>
+          <input id="sound-name" type="text"
+                class="form-control"
+                ng-model="$ctrl.sound.name"
+                name="sound-name">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input id="description" type="textarea"
+              class="form-control"
+              ng-model="$ctrl.sound.description"
+              name="description">
+      </div>
+
+      <div class="flexer">
+        <div class="form-group third">
+          <label for="keyword">First Key Word</label>
+          <input id="keyword" type="text"
+                class="form-control"
+                ng-model="$ctrl.sound.keyword"
+                name="key-word-1">
+        </div>
+
+        <div class="flexer pad-top-1em">
+          <div class="form-group half">
+            <label for="public">Public</label>
+            <input id="public" type="radio"
+                  class="form-control"
+                  ng-model="$ctrl.sound.public"
+                  name="public">
+          </div>
+        </div>
+        <input type="button" id="sound-submit" name=""
+                class="third btn btn-info" value="Submit"
+                ng-click="$ctrl.putSound()">
+      </div>
+    </form>
+  </div>
+</div>

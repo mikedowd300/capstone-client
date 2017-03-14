@@ -4,6 +4,10 @@ angular.module('app')
       const vm = this;
 
       vm.$onInit = function() {
+        vm.makeTitle();
+      }
+
+      vm.makeTitle = function() {
         if(vm.page.landing) vm.title = 'EarByter.com';
         if (vm.page.members) vm.title = `Welcome ${vm.user.email}!`;
         if (vm.page.api) vm.title = 'Checkout the EarByter API';

@@ -4,7 +4,15 @@ angular.module('app')
       const vm = this;
 
       vm.$onInit = function() {
+        vm.showMessages = false;
+      }
 
+      vm.showTrue = function() {
+        vm.showMessages = true;
+      }
+
+      vm.showFalse = function() {
+        vm.showMessages = false;
       }
 
       vm.play= function(sound) {

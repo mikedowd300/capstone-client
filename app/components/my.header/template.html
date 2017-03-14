@@ -1,9 +1,9 @@
 <div class="header-wrapper full-width relative">
   <div class="flexer">
-    <div class="half">
-      <h2 class="text-center">{{$ctrl.title}}</h2>
+    <div ng-class="{'half': $ctrl.page.landing, 'full-width': $ctrl.page.login}">
+      <h2 class="text-center head-title">{{$ctrl.global.title}}</h2>
     </div>
-    <div class="half flexer">
+    <div ng-class="{'half': $ctrl.page.landing, 'zero-width': $ctrl.page.login}" class="flexer">
       <div class="third header-nav-div" ng-show="!$ctrl.user.type">
         <h5 class="text-center">API Docs</h5>
       </div>
