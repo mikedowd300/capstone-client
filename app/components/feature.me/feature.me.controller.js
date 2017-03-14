@@ -25,16 +25,6 @@ angular.module('app')
         });
       }
 
-      // vm.logIn = function() {
-      //   $http.post(`http://localhost:3000/members/login`, vm.login)
-      //   .then(function(data) {
-      //     console.log(data);
-      //   }, function() {
-      //     console.log('Login Failed!');
-      //   });
-      // }
-
-
     },
     templateUrl: 'app/components/feature.me/template.html',
     bindings: {

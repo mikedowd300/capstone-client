@@ -24,6 +24,7 @@ angular.module('app')
       vm.copy = function(sound) {
         let str = `copy-${sound.id}`;
         var copySelection = document.getElementById(str);
+        copySelection.focus();
         copySelection.select();
         document.execCommand('copy');
       }

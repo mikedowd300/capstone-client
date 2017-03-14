@@ -27,7 +27,7 @@ angular.module('app')
           vm.sound.member_id = vm.user.id;
           $http.post('http://localhost:3000/sounds', vm.sound)
           .then(function() {
-            console.log(vm.sound);
+            vm.user.sounds.push(vm.sound);
           }, function() {
             console.log('The sound did NOT post');
           })

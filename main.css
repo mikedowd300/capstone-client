@@ -75,6 +75,14 @@
   overflow-x: visible;
 }
 
+.transparent {
+  color: transparent;
+}
+
+body {
+  font-family: 'Inconsolata', monospace;
+}
+
 .header-wrapper {
   height: 4em;
   background-color: #2E0219;
@@ -147,7 +155,12 @@
 
 .sound-message-wrapper {
   background-color: #A7C4C2;
+  border-radius: 3px;
+  color: grey;
   border: 1px solid black;
+  top: -5px;
+  left: -5px;
+  padding: 3px;
 }
 
 .search-wrapper {
@@ -229,16 +242,19 @@
 }
 
 .whats-this {
-  background-color: rgba(34, 29, 34, .5);
+  background-color: rgba(34, 29, 34, .9);
   color: white;
+  padding: 3px;
+  top: -10px;
+  border-radius: 3px;
 }
 
 .whats-this-poke {
   margin: 1px 0;
 }
 
-.member-wrapper .margin-2 {
-  margin-top: 3px;
+.member-wrapper .margin-0 {
+  margin-top: 0;
 }
 
 .sound-form-wrapper {
