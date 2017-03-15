@@ -30,6 +30,7 @@ angular.module('app')
             vm.page.login = false;
             vm.user = data.data;
             vm.user.email = vm.login.email;
+            vm.user.password = vm.login.password;
             vm.page.landing = false;
             if(vm.user.type === 'member') {
               vm.page.members = true;

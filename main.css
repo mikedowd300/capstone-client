@@ -19,6 +19,10 @@
   width: 33.333%
 }
 
+.two-thirds {
+  width: 66.666%;
+}
+
 .absolute {
   position: absolute;
 }
@@ -101,9 +105,17 @@ body {
   padding: 0;
 }
 
-.member-wrapper {
+.member-wrapper, .admin-wrapper {
   height: 84vh;
   padding: 0;
+}
+
+.admin-wrapper {
+  background-image:
+  url("http://www.davesdooropening.com/wp-content/uploads/2015/01/are-sound-waves-the-future-of-mobile-marketing-68005190f2.jpg");
+  background-repeat: no-repeat;
+  /*background-size: cover;*/
+  background-size: 100% 84vh;
 }
 
 .head-title {
@@ -245,7 +257,6 @@ body {
   background-color: rgba(34, 29, 34, .9);
   color: white;
   padding: 3px;
-  top: -10px;
   border-radius: 3px;
 }
 
@@ -267,4 +278,37 @@ body {
 
 .sound-title {
   color: white;
+}
+
+.adm-data-usage-wrapper, .adm-search-urls-wrapper {
+  padding: 1em;
+  padding-bottom: 0;
+}
+
+.adm-data-div, .adm-searchby-div, .adm-display-div {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+.adm-search-urls-wrapper {
+  max-height: 13em;
+}
+
+.grey-bottom {
+  border-bottom: 1px solid grey;
+}
+
+.adm-display-div {
+  overflow: auto;
+  max-height: 12em;
+}
+
+.featured {
+  background-color: red;
+}
+
+.not-featured {
+  background-color: green;
 }

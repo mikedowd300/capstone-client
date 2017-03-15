@@ -1,0 +1,34 @@
+<div class="adm-search-urls-wrapper flexer">
+
+  <div class="adm-searchby-div third">
+    <div class="urls-for-featuring">
+      <form class="" name="$ctrl.urlFeatureForm">
+
+        <div class="form-group">
+          <label for="featured">Featured</label>
+          <input type="radio" name="featureable-urls" value="featured" id="featured"
+              ng-model="$ctrl.searchBy">
+        </div>
+
+        <div class="form-group">
+          <label for="not-featured">Not Featured</label>
+          <input type="radio" name="featureable-urls" value="not" id="not-featured"
+              ng-model="$ctrl.searchBy">
+        </div>
+
+        <div class="form-group">
+          <label for="all-urls">All Urls</label>
+          <input type="radio" checked name="featureable-urls" value="all" id="all-urls"
+              ng-model="$ctrl.searchBy">
+        </div>
+
+        <input class="btn btn-info" type="submit" name="" value="Get Urls" ng-click="$ctrl.getUrls()">
+      </form>
+    </div>
+  </div>
+
+  <div class="two-thirds"  ng-show="$ctrl.showDisplay">
+    <adm-display-urls user="$ctrl.user" page="$ctrl.page" global="$ctrl.global" urls="$ctrl.urls"></adm-display-urls>
+  </div>
+
+</div>
