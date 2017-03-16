@@ -12,10 +12,11 @@ angular.module('app')
         .then(function(data) {
           vm.sounds = data.data;
           vm.global.madeSearch = true;
+          vm.searchTerm = '';
         });
       }
 
-      vm.play= function(sound) {
+      vm.play = function(sound) {
         let str = `sound-${sound.id}`
         var audio = document.getElementById(str);
         audio.play();

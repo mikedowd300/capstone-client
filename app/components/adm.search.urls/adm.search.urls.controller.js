@@ -9,11 +9,17 @@ angular.module('app')
       }
 
       vm.getUrls = function() {
-        console.log(vm.searchBy);
         vm.showDisplay = true;
-        $http.get(`http://localhost:3000/featuredurls/:${vm.searchBy}`)
+        let obj = {
+          searchBy: vm.searchBy,
+          password: vm.user.password
+        }
+        console.log(obj);
+        $http.post(`http://localhost:3000/featuredurls/filter`, obj)
         .then(function(data) {
-          vm.urls = data.data;
+          if(data.data != "PASSWORD FAILURE!") {
+            vm.urls = data.data;
+          }
         });
       }
 

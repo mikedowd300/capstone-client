@@ -39,6 +39,10 @@
   display: flex;
 }
 
+.flex-end {
+  justify-content: flex-end;
+}
+
 .height100 {
   height: 100%;
 }
@@ -150,16 +154,12 @@ body {
 
 .sound-box {
   background-color: #6A0F49;
-  width: 60%;
+  width: 50%;
   padding: 3px;
   margin: 2px 0;
   color: #97EFE9;
   border-radius: 10px;
 }
-
-/*.sound-wrapper {
-  border-radius: 10px;
-}*/
 
 .sound-box:hover {
   cursor: pointer;
@@ -280,7 +280,7 @@ body {
   color: white;
 }
 
-.adm-data-usage-wrapper, .adm-search-urls-wrapper {
+.adm-data-usage-wrapper, .adm-search-urls-wrapper, .adm-search-sounds-wrapper  {
   padding: 1em;
   padding-bottom: 0;
 }
@@ -292,7 +292,7 @@ body {
   padding: 3px;
 }
 
-.adm-search-urls-wrapper {
+.adm-search-urls-wrapper{
   max-height: 13em;
 }
 
