@@ -4,7 +4,7 @@ angular.module('app')
       const vm = this;
 
       vm.$onInit = function() {
-        
+
       }
 
       vm.showLogin = function() {
@@ -13,6 +13,24 @@ angular.module('app')
 
       vm.showSignUp = function() {
         vm.page.signup = true;
+      }
+
+      vm.showApi = function() {
+        vm.page.api = true;
+        vm.page.landing = false;
+        vm.page.members = false;
+        vm.page.admin = false;
+        vm.page.login = false;
+        vm.page.signup = false;
+      }
+
+      vm.showHome = function() {
+        vm.page.api = false;
+        vm.page.landing = true;
+        vm.page.members = false;
+        vm.page.admin = false;
+        vm.page.login = false;
+        vm.page.signup = false;
       }
 
     },

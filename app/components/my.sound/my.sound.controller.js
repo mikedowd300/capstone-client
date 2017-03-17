@@ -32,6 +32,7 @@ angular.module('app')
       vm.toggleIsFeatured = function(sound) {
         sound.isFeatured = !sound.isFeatured;
         sound.password = vm.user.password;
+        sound.id = sound.sound_id;
         console.log(sound);
         $http.put(`http://localhost:3000/sounds`, sound)
         .then(function(data) {

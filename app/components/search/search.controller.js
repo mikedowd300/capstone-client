@@ -5,11 +5,14 @@ angular.module('app')
 
       vm.$onInit = function() {
         vm.sounds = [];
+        vm.options = ['name', 'genre', 'author'];
       }
 
       vm.doSearch = function() {
-        $http.get(`http://localhost:3000/sounds/${vm.searchTerm}`)
+        if(vm.searchOption === undefined) vm.searchOption = 'name';
+        $http.get(`http://localhost:3000/sounds/${vm.searchOption}/:${vm.searchTerm}`)
         .then(function(data) {
+          console.log(data.data);
           vm.sounds = data.data;
           vm.global.madeSearch = true;
           vm.searchTerm = '';

@@ -1,13 +1,14 @@
 <div class="header-wrapper full-width relative">
   <div class="flexer">
-    <div ng-class="{'half': $ctrl.page.landing, 'full-width': $ctrl.page.login}">
+    <div ng-class="{'half': $ctrl.page.landing || $ctrl.page.api, 'full-width': $ctrl.page.login}">
       <h2 class="text-center head-title">{{$ctrl.global.title}}</h2>
     </div>
-    <div ng-class="{'half': $ctrl.page.landing, 'zero-width': $ctrl.page.login}" class="flexer">
-      <div class="third header-nav-div" ng-show="!$ctrl.user.type">
+    <div ng-class="{'half': $ctrl.page.landing || $ctrl.page.api, 'zero-width': $ctrl.page.login}" class="flexer">
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.api"  ng-click="$ctrl.showApi()">
         <h5 class="text-center">API Docs</h5>
       </div>
-      <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.landing">
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.landing"
+           ng-click="$ctrl.showHome()">
         <h5 class="text-center">Home</h5>
       </div>
       <div class="third header-nav-div" ng-show="!$ctrl.user.type" ng-click="$ctrl.showSignUp()">

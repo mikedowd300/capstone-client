@@ -1,8 +1,10 @@
-<div class="featured-sounds-wrapper" ng-show="!$crtl.global.madeSearch">
+<div class="featured-sites-wrapper" ng-show="!$crtl.global.madeSearch">
   <h4 class="text-white">Sites that use Earbyter!</h4>
-  <div class="" ng-repeat="url in $ctrl.urls">
-    <a href="{{url.url}}"><div class="site-box" ng-click="$ctrl.play(url)">
-      <h4>{{url.name}}</h4>
-    </div></a>
+  <div class="featured-sites-inner-wrapper">
+    <div class="" ng-repeat="url in $ctrl.urls">
+      <a class="text-offwhite" href="{{url.url}}"><div class="site-box" ng-click="$ctrl.play(url)">
+        <h4>{{url.name}}</h4>
+      </div></a>
+    </div>
   </div>
 </div>

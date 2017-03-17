@@ -1,13 +1,15 @@
 <div class="featured-sounds-wrapper" ng-show="!$crtl.global.madeSearch">
   <h4 class="text-white">Check out these sounds!</h4>
-  <div class="" ng-repeat="sound in $ctrl.sounds">
-    <my-sound user="$ctrl.user" page="$ctrl.page" global="$ctrl.global" sound="sound"></my-sound>
-    <!-- <div class="sound-box" ng-click="$ctrl.play(sound)">
-      <h4 class="text-center no-margin">{{sound.name}}</h4>
-      <audio ng-show="" id="sound-{{sound.id}}">
-        <source src="{{sound.url}}"  type="audio/mpeg">
-      </audio>
-    </div> -->
+  <div class="featured-sounds-inner-wrapper">
+    <div class="" ng-repeat="sound in $ctrl.sounds">
+      <my-sound user="$ctrl.user" page="$ctrl.page" global="$ctrl.global" sound="sound"></my-sound>
+      <!-- <div class="sound-box" ng-click="$ctrl.play(sound)">
+        <h4 class="text-center no-margin">{{sound.name}}</h4>
+        <audio ng-show="" id="sound-{{sound.id}}">
+          <source src="{{sound.url}}"  type="audio/mpeg">
+        </audio>
+      </div> -->
 
+    </div>
   </div>
 </div>

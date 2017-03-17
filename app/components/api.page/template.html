@@ -1,0 +1,41 @@
+<div class="api-page-wrapper no-over" ng-show="$ctrl.page.api">
+  <div class="dampener">
+    <div class="flexer">
+      <div class="api-info">
+
+        <h2>It's so easy to use the EarByter API!</h2>
+        <h3>BASIC SEARCH</h3>
+        <p>EarByter's API will return an array of urls. These Urls point to sounds in a sound database. A typical API call would look like:</p>
+        <p class="code"><b>www.earbyter.com/api/sounds</b></p>
+        <p>and a developer can expect a result of the latest 100 sounds in JSON looking like:</p>
+        <p class="code"><b>{
+          [
+            "www.soundlocation1.com",
+            "www.soundlocation2.com",
+            ....,
+            "www.soundlocation100.com"
+          ]
+        }</b></p>
+        <h3>SEARCH CRITERIA</h3>
+        <p>There are 3 criteria from which a developer may search: name, genre and author. With a <em>name</em> search the first items matched are exact matches, the second are items that have a name "like" the input criteria. The third level of matches are "like" matches from the genre field.</p>
+        <p>A search for a particular name would look like:</p>
+        <p class="code"><b>www.earbyter.com/api/sounds/?name=YOUR_NAME_HERE</b></p>
+        <br>
+        <p>A search for the <em>genre</em> is much like a search for <em>name</em> except that the genre is given first priority. A search for a particular genre would look like:</p>
+        <p class="code"><b>www.earbyter.com/api/sounds/?genre=YOUR_GENRE_HERE</b></p>
+        <br>
+        <p>An <em>author</em> search will return exact matches first and "like" matches second. A search for a particular author would look like:</p>
+        <p class="code"><b>www.earbyter.com/api/sounds/?author=AUTHOR_HERE</b></p>
+
+      </div>
+      <div class="api-sidebar">
+        <h3>Festured Site </h3>
+        <div class="img-container">
+          <img src="../../images/featured.jpeg" alt="">
+        </div>
+        <p>Developers, have you made a site that uses Earbyter? Would you like us to feature your site?</p>
+        <p>Members may submit sites as candidates for featuring. To have your site considered become a member by signing up and submit your site's URL.</p>
+      </div>
+    </div>
+  </div>
+</div>

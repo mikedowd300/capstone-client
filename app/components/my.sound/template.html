@@ -15,16 +15,14 @@
 
       <div class="third sound-feature-button flexer flex-end" ng-show="$ctrl.page.admin">
         <div class="btn btn-info" ng-click="$ctrl.toggleIsFeatured($ctrl.sound)">
-          <h5>Feature</h5>
+          <h5 class="no-margin">Feature</h5>
         </div>
       </div>
     </div>
     <audio ng-show="" id="sound-{{$ctrl.sound.id}}">
       <source src="{{$ctrl.sound.url}}"  type="audio/mpeg">
     </audio>
-
   </div>
-
 
   <div class="copy-container" ng-click="$ctrl.copy($ctrl.sound)">
     <textarea ng-show="true" class="copy-textarea" id="copy-{{$ctrl.sound.id}}">{{$ctrl.sound.url}}</textarea>

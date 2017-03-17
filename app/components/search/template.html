@@ -1,14 +1,22 @@
 <div class="search-wrapper margin-0">
-  <h5 class="transparent whats-this-poke">Whats this?</h5>
+  <h5 class="transparent whats-this-poke" ng-show="$ctrl.page.member">Whats this?</h5>
   <form ng-submit="$ctrl.doSearch()">
-    <div class="form-group">
-      <input type="text" class="form-control" placeholder="Search" ng-model="$ctrl.searchTerm">
-      <button type="submit" class="btn btn-default" ng-show="false">Submit</button>
+    <div class="flexer">
+      <div class="form-group two-thirds">
+        <input type="text" class="form-control" placeholder="Search" ng-model="$ctrl.searchTerm">
+        <button type="submit" class="btn btn-default" ng-show="false">Submit</button>
+      </div>
+      <div class="form-group third search-selector btn">
+        <select id="searchby" ng-model="$ctrl.searchOption"
+            ng-options="option for option in $ctrl.options">
+          <option value="" >Search by:</option>
+        </select>
+      </div>
     </div>
   </form>
   <div class="" ng-show="$ctrl.global.madeSearch">
-    <div class="">
-      <div class="" ng-repeat="sound in $ctrl.sounds">
+    <div ng-class="{'landing-display': $ctrl.page.landing , 'admin-display': $ctrl.page.admin}">
+      <div class="half" ng-repeat="sound in $ctrl.sounds">
 
         <my-sound user="$ctrl.user" page="$ctrl.page" global="$ctrl.global" sound="sound"></my-sound>
 
