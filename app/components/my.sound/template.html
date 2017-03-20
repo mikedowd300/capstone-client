@@ -4,7 +4,10 @@
       ng-mouseover="$ctrl.showTrue()"
       ng-mouseleave="$ctrl.showFalse()"
       ng-class="{'featured': $ctrl.sound.isFeatured && $ctrl.page.admin, 'not-featured': !$ctrl.sound.isFeatured && $ctrl.page.admin}">
-      <div class="absolute z100000 sound-message-wrapper" ng-show="$ctrl.showMessages">
+      <div class="absolute z100000 sound-message-wrapper"
+          ng-show="$ctrl.showMessages"
+          ng-dblclick="$ctrl.play($ctrl.sound)"
+          ng-click="$ctrl.copy($ctrl.sound)">
         <p class="no-margin text-center">Click to copy!</p>
         <p class="no-margin text-center">Double click to play!</p>
       </div>

@@ -21,6 +21,7 @@ angular.module('app')
       };
 
       vm.putSound = function() {
+        console.log('Its ', vm.isPutable);
         if(vm.isPutable) {
           vm.uploadFile(vm.awsFile, vm.awsUrl, vm.sound.url)
           vm.sound.isFeatured = false;

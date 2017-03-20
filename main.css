@@ -302,6 +302,7 @@ body {
   background: #A7C4C2;
   overflow-y: auto;
   overflow-x: hidden;
+  border-left: 1px solid black;
 }
 
 .whats-this {
@@ -320,11 +321,12 @@ body {
 }
 
 .sound-form-wrapper {
-  background-color: rgba(103, 123, 211, .7);
+  background-color: rgba(103, 123, 211, .9);
   padding: 1.5em;
   width: 90%;
   margin: 1em 5%;
   border-radius: 12px;
+  border: 1px solid black;
 }
 
 .sound-title {
@@ -420,4 +422,21 @@ b {
 .admin-display {
   max-height: 28vh;
   overflow: auto;
+}
+
+#sound-submit {
+  margin: 0;
+  padding: 0;
+}
+
+.sound-submit-btn-div {
+  margin: 1.8em 0 0 .5em;
+  padding: 0;
+  height: 2.4em;
+  width: 100%;
+}
+
+.your-sound-title-wrapper {
+  border: 1px solid black;
+  padding-left: .5em;
 }

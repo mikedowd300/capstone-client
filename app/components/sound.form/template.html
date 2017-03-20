@@ -1,6 +1,7 @@
 <div class="sound-form-wrapper container col-xs-12">
   <div class="add-sound">
-    <form class="sound-form" name="$ctrl.sounder">
+    <form novalidate class="sound-form" name="$ctrl.sounder"
+    ng-submit="$ctrl.putSound()">
 
       <div class="flexer">
         <div class="form-group half">
@@ -11,7 +12,7 @@
 
         <div class="form-group half">
           <label for="sound-name">Name your Sound</label>
-          <input id="sound-name" type="text"
+          <input required id="sound-name" type="text"
                 class="form-control"
                 ng-model="$ctrl.sound.name"
                 name="sound-name">
@@ -20,22 +21,22 @@
 
       <div class="form-group">
         <label for="description">Description</label>
-        <input id="description" type="textarea"
+        <input required id="description" type="textarea"
               class="form-control"
               ng-model="$ctrl.sound.description"
               name="description">
       </div>
 
       <div class="flexer">
-        <div class="form-group third">
-          <label for="keyword">First Key Word</label>
-          <input id="keyword" type="text"
+        <div class="form-group two-thirds">
+          <label for="keyword">Genre</label>
+          <input required id="keyword" type="text"
                 class="form-control"
                 ng-model="$ctrl.sound.keyword"
                 name="key-word-1">
         </div>
 
-        <div class="flexer pad-top-1em">
+        <!-- <div class="flexer pad-top-1em">
           <div class="form-group half">
             <label for="public">Public</label>
             <input id="public" type="radio"
@@ -43,10 +44,15 @@
                   ng-model="$ctrl.sound.public"
                   name="public">
           </div>
+        </div> -->
+        <div class="btn btn-info third sound-submit-btn-div">
+        <!-- ng-click="$ctrl.putSound()"> -->
+          <input type="submit" id="sound-submit" ng-show="true"
+              class="btn btn-info sound-submit-btn-div"
+              value="Submit">
+              <!-- ng-click="$ctrl.putSound()"> -->
         </div>
-        <input type="button" id="sound-submit" name=""
-                class="third btn btn-info" value="Submit"
-                ng-click="$ctrl.putSound()">
+
       </div>
     </form>
   </div>
