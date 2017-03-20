@@ -327,6 +327,7 @@ body {
   margin: 1em 5%;
   border-radius: 12px;
   border: 1px solid black;
+  font-size: 1.3em;
 }
 
 .sound-title {
@@ -439,4 +440,8 @@ b {
 .your-sound-title-wrapper {
   border: 1px solid black;
   padding-left: .5em;
+}
+
+.add-sound {
+  min-width: 280px;
 }
