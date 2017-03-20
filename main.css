@@ -101,6 +101,12 @@
   background-color: rgba(255, 255, 255, .75);
 }
 
+.dampener-red {
+  width: 100%;
+  height: 84vh;
+  background-color: rgba(0, 0, 0, .4);
+}
+
 body {
   font-family: 'Inconsolata', monospace;
 }
@@ -181,6 +187,8 @@ body {
   margin: 2px 0;
   color: #97EFE9;
   border-radius: 10px;
+  max-width: 14em;
+  border: 2px solid #97EFE9;
 }
 
 .sound-box:hover {
@@ -244,7 +252,11 @@ body {
 }
 
 .featured-sites-wrapper {
-  margin: 0 .7em
+  margin: 0 0 0 1.2em;
+}
+
+.featured-sites-prewrapper {
+  border-left: 1px solid #97EFE9;
 }
 
 .featured-sites-inner-wrapper {

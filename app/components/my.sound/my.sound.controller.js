@@ -16,13 +16,14 @@ angular.module('app')
       }
 
       vm.play= function(sound) {
-        let str = `sound-${sound.id}`
+        console.log(sound);
+        let str = `sound-${sound.id || sound.sound_id}`
         var audio = document.getElementById(str);
         audio.play();
       }
 
       vm.copy = function(sound) {
-        let str = `copy-${sound.id}`;
+        let str = `copy-${sound.id || sound.sound_id}`;
         var copySelection = document.getElementById(str);
         copySelection.focus();
         copySelection.select();
@@ -32,7 +33,7 @@ angular.module('app')
       vm.toggleIsFeatured = function(sound) {
         sound.isFeatured = !sound.isFeatured;
         sound.password = vm.user.password;
-        sound.id = sound.sound_id;
+        sound.id = sound.id || sound.sound_id;
         console.log(sound);
         $http.put(`http://localhost:3000/sounds`, sound)
         .then(function(data) {

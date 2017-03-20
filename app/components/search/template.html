@@ -1,5 +1,6 @@
 <div class="search-wrapper margin-0">
-  <h5 class="transparent whats-this-poke" ng-show="$ctrl.page.member">Whats this?</h5>
+  <!-- <h5 class="transparent whats-this-poke" ng-show="$ctrl.page.member">Whats this?</h5> -->
+  <h5 class="transparent whats-this-poke" ng-show="!$ctrl.page.admin">Whats this?</h5>
   <form ng-submit="$ctrl.doSearch()">
     <div class="flexer">
       <div class="form-group two-thirds">

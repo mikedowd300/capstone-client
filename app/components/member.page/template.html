@@ -9,7 +9,7 @@
           <feature-me user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></feature-me>
         </div>
       </div>
-      <div class="form-wrapper">
+      <div class="form-wrapper" ng-show="!$ctrl.global.madeSearch">
         <sound-form user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></sound-form>
       </div>
     </div>

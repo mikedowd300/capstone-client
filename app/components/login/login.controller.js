@@ -32,6 +32,7 @@ angular.module('app')
             vm.user.email = vm.login.email;
             vm.user.password = vm.login.password;
             vm.page.landing = false;
+            vm.global.madeSearch = false;
             if(vm.user.type === 'member') {
               vm.page.members = true;
               vm.global.title = `Welcome ${vm.user.email}!`;

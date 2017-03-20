@@ -19,12 +19,12 @@
         </div>
       </div>
     </div>
-    <audio ng-show="" id="sound-{{$ctrl.sound.id}}">
+    <audio ng-show="" id="sound-{{$ctrl.sound.id || $ctrl.sound.sound_id}}">
       <source src="{{$ctrl.sound.url}}"  type="audio/mpeg">
     </audio>
   </div>
 
   <div class="copy-container" ng-click="$ctrl.copy($ctrl.sound)">
-    <textarea ng-show="true" class="copy-textarea" id="copy-{{$ctrl.sound.id}}">{{$ctrl.sound.url}}</textarea>
+    <textarea ng-show="true" class="copy-textarea" id="copy-{{$ctrl.sound.id || $ctrl.sound.sound_id}}">{{$ctrl.sound.url}}</textarea>
   </div>
 </div>

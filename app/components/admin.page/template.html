@@ -1,8 +1,12 @@
 <div class="admin-wrapper" ng-show="$ctrl.page.admin">
+  <div class="dampener-red">
+    <adm-data-usage user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></adm-data-usage>
+    <adm-search-urls user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></adm-search-urls>
+    <adm-search-sounds user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></adm-search-sounds>
 
-  <adm-data-usage user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></adm-data-usage>
-  <adm-search-urls user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></adm-search-urls>
-  <adm-search-sounds user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></adm-search-sounds>
+  </div>
+
+
 
   <!-- <div class="test-route">
     <input type="text" name="" value="" ng-model="$ctrl.author">

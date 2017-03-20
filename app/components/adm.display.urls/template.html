@@ -3,7 +3,7 @@
     <div class="" ng-repeat="url in $ctrl.urls">
       <div class="flexer grey-bottom">
         <div class="two-thirds" ng-class="{'featured': url.isFeatured, 'not-featured': !url.isFeatured}">
-          <h5 class="text-center">{{url.url}}</h5>
+          <h4 class="text-center">{{url.url}}</h4>
         </div>
         <div class="btn btn-info third" ng-click="$ctrl.toggleIsFeatured(url)">
           <h5>Feature</h5>
