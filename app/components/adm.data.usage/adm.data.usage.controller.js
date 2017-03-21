@@ -8,7 +8,7 @@ angular.module('app')
       }
 
       vm.getTotalData = function() {
-        $http.post('http://localhost:3000/sounds/datausage', {password: vm.user.password})
+        $http.post(`${vm.global.url}sounds/datausage`, {password: vm.user.password})
         .then(function(data) {
           vm.allData = `${Math.round(data.data/1024)}KB`;
         });

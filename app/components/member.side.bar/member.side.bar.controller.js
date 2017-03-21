@@ -6,10 +6,6 @@ angular.module('app')
       vm.$onInit = function() {
       }
 
-      vm.test = function() {
-        console.log(vm.user.sounds);
-      }
-
     },
     templateUrl: 'app/components/member.side.bar/template.html',
     bindings: {

@@ -67,20 +67,26 @@
   text-align: center;
 }
 
-.text-white {
-  color: white;
+.text-black {
+  color: black;
+  text-decoration: underline;
 }
 
 .text-offwhite {
-  color: rgb(255, 200, 200);
+  color: #5C00AF;
 }
 
 .text-offwhite:hover {
-  color: white;
+  text-shadow: 1px 1px 1px aqua;
+  text-decoration: none;
 }
 
 .no-margin {
   margin: 0;
+}
+
+.marg-tr-0 {
+  margin-right: 0;
 }
 
 .no-over {
@@ -123,9 +129,9 @@ body {
 
 .landing-wrapper {
   height: 84vh;
-  background-image: url("http://blogs.bodleian.ox.ac.uk/digital/wp-content/uploads/sites/166/2016/09/JohnsHopkinsSoundImage.jpg");
+  /*background-image: url("http://blogs.bodleian.ox.ac.uk/digital/wp-content/uploads/sites/166/2016/09/JohnsHopkinsSoundImage.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
   padding: 0;
 }
 
@@ -136,13 +142,14 @@ body {
 
 .admin-wrapper {
   background-image:
-  url("http://www.davesdooropening.com/wp-content/uploads/2015/01/are-sound-waves-the-future-of-mobile-marketing-68005190f2.jpg");
-  background-repeat: no-repeat;
+  /*url("http://www.davesdooropening.com/wp-content/uploads/2015/01/are-sound-waves-the-future-of-mobile-marketing-68005190f2.jpg");
+  background-repeat: no-repeat;*/
   /*background-size: cover;*/
   background-size: 100% 84vh;
 }
 
 .api-page-wrapper {
+  width: 100%;
   background-image:
   url("images/earbyte.png");
   background-repeat: no-repeat;
@@ -188,7 +195,8 @@ body {
   color: #97EFE9;
   border-radius: 10px;
   max-width: 14em;
-  border: 2px solid #97EFE9;
+  border: 3px solid #97EFE9;
+  box-shadow: 2px 2px 2px grey;
 }
 
 .sound-box:hover {
@@ -235,7 +243,7 @@ body {
   background-color: #A7C4C2;
   z-index: 10000;
   border-radius: 10px;
-  border: 1px solid #97EFE9;
+  border: 2px solid white;
   width: 35em;
   top: 5em;
   left: calc((100% - 35em) / 2);
@@ -263,7 +271,7 @@ body {
   max-height: 62vh;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: rgba(0,0,0, .1);
+  background-color: white;
 }
 
 .x-closer {
@@ -283,9 +291,9 @@ body {
   width: 85%;
   background-color: transparent;
   overflow-y: auto;
-  background-image: url("https://sarahbear48847.files.wordpress.com/2015/01/funny-sounds.jpeg");
+  /*background-image: url("https://sarahbear48847.files.wordpress.com/2015/01/funny-sounds.jpeg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 .side-bar-wrapper {
@@ -431,7 +439,7 @@ b {
 }
 
 .sound-submit-btn-div {
-  margin: 1.8em 0 0 .5em;
+  margin: 2.2em 0 0 .5em;
   padding: 0;
   height: 2.4em;
   width: 100%;
@@ -444,4 +452,42 @@ b {
 
 .add-sound {
   min-width: 280px;
+}
+
+.padding-rt {
+  padding-right: 6.8em;
+}
+
+.marg-lf-0 {
+  margin-left: -15px;
+}
+
+.marg-rt-0 {
+  margin-right: -15px;
+}
+
+.align-rt {
+  margin-left: 30px;
+}
+
+.darken {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,.8);
+  z-index: 9999;
+}
+
+.box-shadow {
+  box-shadow: 2px 2px 2px black;
+}
+
+.width-90 {
+  width: 90%;
+  margin-left: 5%;
+}
+
+.code {
+  margin-left: 5em;
 }

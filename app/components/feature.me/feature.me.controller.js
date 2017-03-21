@@ -17,7 +17,7 @@ angular.module('app')
 
       vm.featureThis = function() {
         vm.featureURL.member_id = vm.user.id;
-        $http.post(`http://localhost:3000/featuredurls`, vm.featureURL)
+        $http.post(`${vm.global.url}featuredurls`, vm.featureURL)
         .then (function(data) {
           vm.featureURL.url = '';
         }, function() {

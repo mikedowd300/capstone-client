@@ -4,7 +4,6 @@ angular.module('app')
       const vm = this;
 
       vm.$onInit = function() {
-        console.log('I work');
       }
 
     },

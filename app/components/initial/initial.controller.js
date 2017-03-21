@@ -16,7 +16,9 @@ angular.module('app')
         };
         vm.global = {
           madeSearch: false,
-          title: 'EarByter.com'
+          title: 'EarByter.com',
+          url: 'https://earbyter.herokuapp.com/'
+          // url: `http://localhost:3000/`
         };
 
       }

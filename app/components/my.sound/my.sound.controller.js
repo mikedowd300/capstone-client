@@ -2,6 +2,8 @@ angular.module('app')
   .component ('mySound', {
     controller: function($http) {
       const vm = this;
+      vm.url = 'https://earbyter.herokuapp.com/'
+      // vm.url = 'http://localhost:3000/'
 
       vm.$onInit = function() {
         vm.showMessages = false;
@@ -16,7 +18,6 @@ angular.module('app')
       }
 
       vm.play= function(sound) {
-        console.log(sound);
         let str = `sound-${sound.id || sound.sound_id}`
         var audio = document.getElementById(str);
         audio.play();
@@ -34,8 +35,7 @@ angular.module('app')
         sound.isFeatured = !sound.isFeatured;
         sound.password = vm.user.password;
         sound.id = sound.id || sound.sound_id;
-        console.log(sound);
-        $http.put(`http://localhost:3000/sounds`, sound)
+        $http.put(`${vm.url}sounds`, sound)
         .then(function(data) {
           console.log(data);
         });

@@ -1,9 +1,30 @@
 <div class="header-wrapper full-width relative">
-  <div class="flexer">
+  <!-- <div class="flexer">
     <div ng-class="{'half': $ctrl.page.landing || $ctrl.page.api, 'full-width': $ctrl.page.login}">
       <h2 class="text-center head-title">{{$ctrl.global.title}}</h2>
     </div>
-    <div ng-class="{'half': $ctrl.page.landing || $ctrl.page.api, 'zero-width': $ctrl.page.login}" class="flexer">
+    <div ng-class="{'half': $ctrl.page.landing || $ctrl.page.api, 'zero-width': $ctrl.page.login}" class="flexer padding-rt">
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.api"  ng-click="$ctrl.showApi()">
+        <h5 class="text-center">API Docs</h5>
+      </div>
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.landing"
+           ng-click="$ctrl.showHome()">
+        <h5 class="text-center">Home</h5>
+      </div>
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type" ng-click="$ctrl.showSignUp()">
+        <h5 class="text-center">Sign Up</h5>
+      </div>
+      <div class="third header-nav-div" ng-show="!$ctrl.user.type" ng-click="$ctrl.showLogin()">
+        <h5 class="text-center">Log In</h5>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="container col-xs-10 col-xs-offset-1">
+    <div ng-class="{'col-xs-6 marg-lf-0': $ctrl.page.landing || $ctrl.page.api, 'col-xs-12': $ctrl.page.login}">
+      <h2 class="head-title">{{$ctrl.global.title}}</h2>
+    </div>
+    <div ng-class="{'col-xs-6 marg-rt-0 align-rt': $ctrl.page.landing || $ctrl.page.api, 'col-xs-0': $ctrl.page.login}" class="flexer">
       <div class="third header-nav-div" ng-show="!$ctrl.user.type && !$ctrl.page.api"  ng-click="$ctrl.showApi()">
         <h5 class="text-center">API Docs</h5>
       </div>
@@ -19,6 +40,7 @@
       </div>
     </div>
   </div>
+
   <login user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></login>
   <sign-up user="$ctrl.user" page="$ctrl.page" global="$ctrl.global"></sign-up>
 </div>

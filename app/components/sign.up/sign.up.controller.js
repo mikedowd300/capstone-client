@@ -18,7 +18,7 @@ angular.module('app')
       }
 
       vm.logIn = function() {
-        $http.post(`http://localhost:3000/members/login`, vm.login)
+        $http.post(`${vm.global.url}members/login`, vm.login)
         .then(function(data) {
           console.log(data);
         }, function() {
@@ -27,9 +27,7 @@ angular.module('app')
       }
 
       vm.submitSignUpForm = function() {
-        // vm.signUp.email = '';
-        // vm.signUp.password = '';
-        $http.post('http://localhost:3000/members/signup', vm.signUp)
+        $http.post(`${vm.global.url}members/signup`, vm.signUp)
         .then(function(data) {
           if(data.data === 'used'){
             vm.inputError = true;
@@ -37,10 +35,8 @@ angular.module('app')
             vm.signUp.password = '';
           } else {
             vm.inputError = false;
-            console.log('you signed u, now u r logging in');
-            $http.post(`http://localhost:3000/members/login`, vm.signUp)
+            $http.post(`${vm.global.url}members/login`, vm.signUp)
             .then(function(datb) {
-              console.log(datb);
               vm.user = datb.data;
               vm.page.members = true;
               vm.page.landing = false;

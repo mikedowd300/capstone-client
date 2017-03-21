@@ -24,10 +24,11 @@ angular.module('app')
       }
 
       vm.logIn = function() {
-        $http.post(`http://localhost:3000/members/login`, vm.login)
+        $http.post(`${vm.global.url}members/login`, vm.login)
         .then(function(data) {
           if(data.data != false) {
             vm.page.login = false;
+            vm.page.signUp = false;
             vm.user = data.data;
             vm.user.email = vm.login.email;
             vm.user.password = vm.login.password;
@@ -44,6 +45,7 @@ angular.module('app')
             }
           } else {
             vm.page.login = true;
+            vm.page.signup = false;
             vm.inputError = true;
           }
 

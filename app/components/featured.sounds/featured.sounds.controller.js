@@ -5,7 +5,7 @@ angular.module('app')
 
       vm.$onInit = function() {
 
-        $http.get(`http://localhost:3000/sounds/featured`)
+        $http.get(`${vm.global.url}sounds/featured`)
         .then(function(data) {
           vm.sounds = data.data;
         });

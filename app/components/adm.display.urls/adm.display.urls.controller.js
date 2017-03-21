@@ -9,9 +9,9 @@ angular.module('app')
 
       vm.toggleIsFeatured = function(url) {
         url.isFeatured = !url.isFeatured;
-        $http.put(`http://localhost:3000/featuredurls`, url)
+        $http.put(`${vm.global.url}featuredurls`, url)
         .then(function(data) {
-          console.log(data);
+          // console.log(data);
         });
       }
 

@@ -5,7 +5,7 @@ angular.module('app')
 
       vm.$onInit = function() {
 
-        $http.get(`http://localhost:3000/featuredurls`)
+        $http.get(`${vm.global.url}featuredurls`)
         .then(function(data) {
           vm.urls = data.data;
           vm.urls.forEach(function(url) {

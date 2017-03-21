@@ -10,9 +10,9 @@ angular.module('app')
 
       vm.doSearch = function() {
         if(vm.searchOption === undefined) vm.searchOption = 'name';
-        $http.get(`http://localhost:3000/sounds/${vm.searchOption}/:${vm.searchTerm}`)
+        console.log(`${vm.global.url}sounds/${vm.searchOption}/:${vm.searchTerm}`);
+        $http.get(`${vm.global.url}sounds/${vm.searchOption}/:${vm.searchTerm}`)
         .then(function(data) {
-          console.log(data.data);
           vm.sounds = data.data;
           vm.global.madeSearch = true;
           vm.searchTerm = '';

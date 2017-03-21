@@ -8,23 +8,23 @@ angular.module('app')
       }
 
       vm.searchByAuthor = function() {
-        $http.get(`http://localhost:3000/sounds/author/:${vm.author}`)
+        $http.get(`${vm.global.url}sounds/author/:${vm.author}`)
         .then(function(data) {
-          console.log(data.data);
+          // console.log(data.data);
         });
       }
 
       vm.searchByGenre = function() {
-        $http.get(`http://localhost:3000/sounds/genre/:${vm.genre}`)
+        $http.get(`${vm.global.url}sounds/genre/:${vm.genre}`)
         .then(function(data) {
-          console.log(data.data);
+          // console.log(data.data);
         });
       }
 
       vm.searchByName = function() {
-        $http.get(`http://localhost:3000/sounds/name/:${vm.name}`)
+        $http.get(`${vm.global.url}sounds/name/:${vm.name}`)
         .then(function(data) {
-          console.log(data.data);
+          // console.log(data.data);
         });
       }
 

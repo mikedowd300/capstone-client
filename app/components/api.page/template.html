@@ -6,26 +6,55 @@
         <h2>It's so easy to use the EarByter API!</h2>
         <h3>BASIC SEARCH</h3>
         <p>EarByter's API will return an array of urls. These Urls point to sounds in a sound database. A typical API call would look like:</p>
-        <p class="code"><b>www.earbyter.com/api/sounds</b></p>
+        <p class="code"><b>https://earbyter.herokuapp.com/api/sounds</b></p>
         <p>and a developer can expect a result of the latest 100 sounds in JSON looking like:</p>
-        <p class="code"><b>{
-          [
-            "www.soundlocation1.com",
-            "www.soundlocation2.com",
-            ....,
-            "www.soundlocation100.com"
-          ]
-        }</b></p>
+        <p class="code">
+          [<br>
+            {<br>
+              "id": 1,<br>
+              "name": "motorcycle",<br>
+              "description": "annaying AF",<br>
+              "keyword": "road-rage",<br>
+              "public": true,<br>
+              "isFeatured": false,<br>
+              "url": "https://s3-us-west-2.amazonaws.com/earbyter-1/motorcycle1.m4a",<br>
+              "mem_size": 393387,<br>
+              "member_id": 3<br>
+            },<br>
+            {<br>
+              "id": 2,<br>
+              "name": null,<br>
+              "description": "a train honks",<br>
+              "keyword": "annoying",<br>
+              "public": true,<br>
+              "isFeatured": false,<br>
+              "url": "https://earbyter-1.s3.amazonaws.com/trainhorn1.m4a",<br>
+              "mem_size": 198953,<br>
+              "member_id": 3<br>
+            },<br>
+            {<br>
+              "id": 13,<br>
+              "name": "Denied",<br>
+              "description": "Dillon wont sing",<br>
+              "keyword": "music",<br>
+              "public": true,<br>
+              "isFeatured": false,<br>
+              "url": "https://earbyter-1.s3.amazonaws.com/test1.m4a",<br>
+              "mem_size": 304138,<br>
+              "member_id": 3<br>
+            }<br>
+          ]<br>
+        </p>
         <h3>SEARCH CRITERIA</h3>
         <p>There are 3 criteria from which a developer may search: name, genre and author. With a <em>name</em> search the first items matched are exact matches, the second are items that have a name "like" the input criteria. The third level of matches are "like" matches from the genre field.</p>
         <p>A search for a particular name would look like:</p>
-        <p class="code"><b>www.earbyter.com/api/sounds?name=YOUR_NAME_HERE</b></p>
+        <p class="code"><b>https://earbyter.herokuapp.com/api/sounds?name=YOUR_NAME_HERE</b></p>
         <br>
         <p>A search for the <em>genre</em> is much like a search for <em>name</em> except that the genre is given first priority. A search for a particular genre would look like:</p>
         <p class="code"><b>www.earbyter.com/api/sounds?genre=YOUR_GENRE_HERE</b></p>
         <br>
         <p>An <em>author</em> search will return exact matches first and "like" matches second. A search for a particular author would look like:</p>
-        <p class="code"><b>www.earbyter.com/api/sounds?author=AUTHOR_HERE</b></p>
+        <p class="code"><b>https://earbyter.herokuapp.com/api/sounds?author=AUTHOR_HERE</b></p>
 
       </div>
       <div class="api-sidebar">

@@ -15,20 +15,3 @@ angular.module('app')
       global: "="
     }
   })
-
-  // angular.module('app')
-  //   .component (' ', {
-  //     controller: function() {
-  //       const vm = this;
-  //
-  //       vm.$onInit = function() {
-  //
-  //       }
-  //
-  //     },
-  //     templateUrl: 'app/components/ /template.html',
-  //     bindings: {
-  //       user: "=",
-  //       page: "="
-  //     }
-  //   })

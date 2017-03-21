@@ -14,8 +14,7 @@ angular.module('app')
           searchBy: vm.searchBy,
           password: vm.user.password
         }
-        console.log(obj);
-        $http.post(`http://localhost:3000/featuredurls/filter`, obj)
+        $http.post(`${vm.global.url}featuredurls/filter`, obj)
         .then(function(data) {
           if(data.data != "PASSWORD FAILURE!") {
             vm.urls = data.data;
