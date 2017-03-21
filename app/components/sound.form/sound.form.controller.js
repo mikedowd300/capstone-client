@@ -25,7 +25,8 @@ angular.module('app')
           vm.sound.isFeatured = false;
           vm.sound.member_id = vm.user.id;
           $http.post(`${vm.global.url}sounds`, vm.sound)
-          .then(function() {
+          .then(function(data) {
+            vm.sound.id = data.data[0].id;
             vm.user.sounds.push(vm.sound);
           }, function() {
             console.log('The sound did NOT post');

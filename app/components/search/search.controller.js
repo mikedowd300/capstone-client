@@ -19,18 +19,18 @@ angular.module('app')
         });
       }
 
-      vm.play = function(sound) {
-        let str = `sound-${sound.id}`
-        var audio = document.getElementById(str);
-        audio.play();
-      }
-
-      vm.copy = function(sound) {
-        let str = `copy-${sound.id}`;
-        var copySelection = document.getElementById(str);
-        copySelection.select();
-        document.execCommand('copy');
-      }
+      // vm.play = function(sound) {
+      //   let str = `sound-${sound.id || sound.sound_id}`
+      //   var audio = document.getElementById(str);
+      //   audio.play();
+      // }
+      //
+      // vm.copy = function(sound) {
+      //   let str = `copy-${sound.id || sound.sound_id}`;
+      //   var copySelection = document.getElementById(str);
+      //   copySelection.select();
+      //   document.execCommand('copy');
+      // }
 
     },
     templateUrl: 'app/components/search/template.html',
