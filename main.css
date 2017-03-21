@@ -141,10 +141,11 @@ body {
 }
 
 .admin-wrapper {
-  background-image:
-  /*url("http://www.davesdooropening.com/wp-content/uploads/2015/01/are-sound-waves-the-future-of-mobile-marketing-68005190f2.jpg");
-  background-repeat: no-repeat;*/
-  /*background-size: cover;*/
+  background-color: #e5e5e5;
+  /*background-image:
+  url("http://www.davesdooropening.com/wp-content/uploads/2015/01/are-sound-waves-the-future-of-mobile-marketing-68005190f2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;*/
   background-size: 100% 84vh;
 }
 
@@ -153,7 +154,6 @@ body {
   background-image:
   url("images/earbyte.png");
   background-repeat: no-repeat;
-  /*background-size: cover;*/
   background-size: 100% 84vh;
 }
 
@@ -372,11 +372,11 @@ body {
 }
 
 .featured {
-  background-color: red;
+  background-color: #00B233;
 }
 
 .not-featured {
-  background-color: green;
+  background-color: #FF1919;
 }
 
 .search-selector {

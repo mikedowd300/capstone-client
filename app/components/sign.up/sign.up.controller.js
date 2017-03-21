@@ -39,6 +39,8 @@ angular.module('app')
             .then(function(datb) {
               vm.user = datb.data;
               vm.page.members = true;
+              vm.page.api = false;
+              vm.page.admin = false;
               vm.page.landing = false;
               vm.page.login = false;
               vm.page.signup = false;
