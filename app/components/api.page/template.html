@@ -56,6 +56,18 @@
         <p>An <em>author</em> search will return exact matches first and "like" matches second. A search for a particular author would look like:</p>
         <p class="code"><b>https://earbyter.herokuapp.com/api/sounds?author=AUTHOR_HERE</b></p>
 
+        <h3>HOW TO USE THIS IN YOUR APP</h3>
+        <p>A basic way to get a sound to play would be adding the URL into a source tag for an audio file like so: </p>
+        <br>
+        <p class="code">{{$ctrl.htmlStr1}}</p>
+        <p class="code2">{{$ctrl.htmlStr2}}</p>
+        <p class="code">{{$ctrl.htmlStr3}}</p>
+        <br>
+        <p>...where the aoundArray is the array of objects returned from the API. Each sound will have either an 'id' property or a 'sound_id' property which can be targeted for uniqueness.</p>
+        <p>Once an element has a unique id it may be targeted with an event listener to play like so:</p>
+        <br>
+        <p class="code">var audio = document.getElementById(some_id);</p>
+        <p class="code">audio.play();</p>
       </div>
       <div class="api-sidebar">
         <h3>Festured Site </h3>
